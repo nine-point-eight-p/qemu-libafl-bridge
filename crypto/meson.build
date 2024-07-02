@@ -54,6 +54,12 @@ util_ss.add(files(
   'clmul.c',
   'init.c',
   'sm4.c',
+  'sha512-internal.c',
+  'sha384-internal.c',
+  'sha256-internal.c',
+  'sha224-internal.c',
+  'sha1-internal.c',
+  'hmac256-internal.c',
 ))
 if gnutls.found()
   util_ss.add(gnutls)
@@ -69,3 +75,4 @@ else
   util_ss.add(files('random-platform.c'))
 endif
 
+util_ss.add(files('xts.c'))
